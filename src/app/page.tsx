@@ -4,11 +4,11 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-12">
+    <main className="flex min-h-screen flex-col items-center pt-12">
       {/* First Content */}
       <div>
         <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex animate-fade-down">
-          <p className="fixed left-0 top-0 flex w-full justify-center dark:from-inherit lg:static lg:w-auto text-myGreen font-bold text-4xl font-mono">
+          <p className="fixed left-0 top-0 flex w-full justify-center dark:from-inherit lg:static lg:w-auto text-slate-700 font-bold text-4xl font-mono">
             Bernard
           </p>
           {/* Todo: Use effect to check is active and modify it */}
@@ -26,7 +26,7 @@ export default function Home() {
               <p>Experience</p>
             </div>
           </div>
-          <div className="font-bold flex flex-row gap-1 text-myGreen">
+          <div className="font-bold flex flex-row gap-1 text-slate-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -49,10 +49,10 @@ export default function Home() {
         <div className="flex flex-row gap-8 justify-between h-screen -mt-20">
           <div className="flex flex-col gap-20 justify-center">
             <div className="trails-div">
-              <h1 className="text-myGreen font-bold text-6xl animate-fade-right">
+              <h1 className="text-slate-700 font-bold text-6xl animate-fade-right">
                 Hello There
               </h1>
-              <h1 className="text-myGreen font-bold text-6xl animate-fade-right animate-delay-[50ms]">
+              <h1 className="text-slate-700 font-bold text-6xl animate-fade-right animate-delay-[50ms]">
                 I&apos;m Bernard
               </h1>
             </div>
@@ -63,8 +63,8 @@ export default function Home() {
               bernardcalvin2000@gmail.com
             </a>
             <div className="flex flex-row animate-fade-up animate-delay-100 animate-ease-out">
-              <p className="text-myGreen text-6xl">1</p>
-              <p className="text-myGreen font-medium text-xl">
+              <p className="text-slate-700 text-6xl">1</p>
+              <p className="text-slate-700 font-medium text-xl">
                 Year of <br />
                 Experience
               </p>
@@ -81,131 +81,168 @@ export default function Home() {
             />
           </div>
           <div className="animate-fade-left justify-center flex flex-col">
-            <p className="text-myGreen mt-11 text-xl">I do code as a</p>
+            <p className="text-slate-700 mt-11 text-xl">I do code as a</p>
             <TypeAnimation
-              className="text-myGreen"
+              className="text-slate-700"
               sequence={["Fullstack", 1000, "Frontend", 1000, "Backend", 1000]}
               speed={30}
               repeat={Infinity}
               style={{ fontSize: "1.25rem", display: "inline-block" }}
             />
-            <p className="text-myGreen text-xl">Developer</p>
+            <p className="text-slate-700 text-xl">Developer</p>
           </div>
         </div>
       </div>
       {/* Second Content */}
-      <div className="flex flex-row bg-white">
-        <div>
-          <div className="text-myGreen font-semibold">
-            <div className="flex flex-row">
-              <div className="rounded-full bg-myGreen p-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="white"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
-                  />
-                </svg>
+      <div className="w-full bg-white flex justify-center">
+        <div className="flex flex-row bg-white h-screen pt-26 justify-evenly max-w-5xl w-full items-center">
+          <div className="">
+            <div className="text-slate-700 font-semibold flex flex-col gap-6">
+              <div className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+                <div className="rounded-full bg-myGreen p-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    className="w-8 h-8"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div className="flex flex-col ml-4 text-xl justify-center">
+                  <h2>Web Developer</h2>
+                  <p className="font-thin">4 Projects</p>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <h2>Web Developer</h2>
-                <p className="font-thin">4 Projects</p>
+              <div className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+                <div className="rounded-full bg-yellow-500 p-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    className="w-8 h-8"
+                  >
+                    <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div className="flex flex-col ml-4 text-xl justify-center">
+                  <h2>Mobile App</h2>
+                  <p className="font-thin">2 Projects</p>
+                </div>
+              </div>
+              <div className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+                <div className="rounded-full bg-red-500 p-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    className="w-8 h-8"
+                  >
+                    <path d="M18.75 12.75h1.5a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5zM12 6a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 0112 6zM12 18a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 0112 18zM3.75 6.75h1.5a.75.75 0 100-1.5h-1.5a.75.75 0 000 1.5zM5.25 18.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 010 1.5zM3 12a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 013 12zM9 3.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5zM12.75 12a2.25 2.25 0 114.5 0 2.25 2.25 0 01-4.5 0zM9 15.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" />
+                  </svg>
+                </div>
+                <div className="flex flex-col ml-4 text-xl justify-center">
+                  <h2>Application Testing</h2>
+                  <p className="font-thin">3 Projects</p>
+                </div>
               </div>
             </div>
-            <h2>Mobile App</h2>
-            <h2>Application Testing</h2>
           </div>
-        </div>
-        <div>
-          <h1>What do I Help?</h1>
-          <p>
-            I will help you to find solution and solve your problems.
-            <br /> I can create and maintain Websites from your needs and
-            vision.
-          </p>
-          <p>
-            I use process to create websites and application to help your
-            business.
-          </p>
+          <div className="text-slate-700 tracking-wider font-medium text-lg">
+            <h1 className="text-6xl font-bold">What do I Help?</h1>
+            <p>
+              I will help you to find solution and solve your <br /> problems. I
+              can create and maintain Websites <br /> from your needs and
+              vision.
+            </p>
+            <br />
+            <p>
+              I use process to create websites <br />
+              and application to help your business.
+            </p>
+
+            <div className="flex flex-row mt-16 text-slate-700 gap-14">
+              <div className="flex flex-col">
+                <h1 className="text-6xl font-bold">5+</h1>
+                <p>Projects Completed</p>
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-6xl font-bold">3+</h1>
+                <p>Testing Projects</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Third Content */}
+      <div className="w-full flex justify-center mt-24 mb-24">
+        <div className="flex flex-col justify-evenly max-w-5xl w-full items-center">
+          <h1 className="text-slate-700 text-6xl font-bold">
+            My Work Experience
+          </h1>
+          {/* Middle of Third Content */}
+          <div className="flex flex-row pt-16 text-slate-700 gap-8">
+            {/* Work Place */}
+            <div className="relative -left-20">
+              {/* Alfagift GLI */}
+              <h2 className="font-bold text-3xl">Alfagift</h2>
+              <p>March 2021 - August 2021</p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              {/* ADX Asia */}
+              <h2 className="font-bold text-3xl mt-40">ADX Asia</h2>
+              <p>September 2022 - Present</p>
+            </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            {/* Time-line */}
+            <div>
+              <div className="relative border-spacing-5 border-2 border-slate-400 border-dashed p-2 rounded-full">
+                <div className="bg-myGreen w-6 h-6 rounded-full"></div>
+              </div>
+              <div className="relative h-44 border left-1/2 border-dashed border-slate-400 w-0"></div>
+              <div className="border-spacing-5 border-2 border-slate-400 border-dashed p-2 rounded-full">
+                <div className="bg-amber-600 w-6 h-6 rounded-full"></div>
+              </div>
+              <div className="relative h-20 border left-1/2 border-dashed border-slate-400 w-0"></div>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div> */}
+            {/* Role and Description */}
+            <div className="relative left-10">
+              {/* Alfagift GLI */}
+              <h2 className="font-bold text-3xl">Application Tester</h2>
+              <p className="tracking-wider font-medium text-lg">
+                Testing various test for Alfagift <br />
+                application in Android, iOS, and website.
+              </p>
+
+              {/* ADX Asia */}
+              <h2 className="font-bold text-3xl mt-32">Software Engineer</h2>
+              <p className="tracking-wider font-medium text-lg">
+                Creating website and mobile app on Android.
+                <br />
+                Creating new features, manage repository <br />
+                and create test script.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Fourth Content */}
+      <div className="w-full bg-white flex justify-center">
+        <div className="flex flex-row bg-white h-screen pt-26 justify-evenly max-w-5xl w-full items-center">
+          <h1>My Latest Works</h1>
+        </div>
+      </div>
     </main>
   );
 }
