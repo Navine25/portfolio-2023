@@ -1,8 +1,45 @@
 "use client";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+const responsive = {
+  desktop: {
+    breakpoint: {
+      max: 3000,
+      min: 1024,
+    },
+    items: 2,
+    partialVisibilityGutter: 40,
+  },
+  mobile: {
+    breakpoint: {
+      max: 464,
+      min: 0,
+    },
+    items: 1,
+    partialVisibilityGutter: 30,
+  },
+  tablet: {
+    breakpoint: {
+      max: 1024,
+      min: 464,
+    },
+    items: 2,
+    partialVisibilityGutter: 30,
+  },
+};
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <main className="flex min-h-screen flex-col items-center pt-12">
       {/* First Content */}
@@ -98,7 +135,11 @@ export default function Home() {
         <div className="flex flex-row bg-white h-screen pt-26 justify-evenly max-w-5xl w-full items-center">
           <div className="">
             <div className="text-slate-700 font-semibold flex flex-col gap-6">
-              <div className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="500"
+                className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36"
+              >
                 <div className="rounded-full bg-myGreen p-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +159,12 @@ export default function Home() {
                   <p className="font-thin">4 Projects</p>
                 </div>
               </div>
-              <div className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+              <div
+                data-aos="fade-right"
+                data-aos-delay="100"
+                data-aos-duration="500"
+                className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36"
+              >
                 <div className="rounded-full bg-yellow-500 p-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +185,12 @@ export default function Home() {
                   <p className="font-thin">2 Projects</p>
                 </div>
               </div>
-              <div className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+              <div
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="500"
+                className="flex flex-row p-6 rounded-lg shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-slate-200 pr-36"
+              >
                 <div className="rounded-full bg-red-500 p-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +208,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="text-slate-700 tracking-wider font-medium text-lg">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-slate-700 tracking-wider font-medium text-lg"
+          >
             <h1 className="text-6xl font-bold">What do I Help?</h1>
             <p>
               I will help you to find solution and solve your <br /> problems. I
@@ -239,8 +294,76 @@ export default function Home() {
 
       {/* Fourth Content */}
       <div className="w-full bg-white flex justify-center">
-        <div className="flex flex-row bg-white h-screen pt-26 justify-evenly max-w-5xl w-full items-center">
-          <h1>My Latest Works</h1>
+        <div className="flex flex-col bg-white h-screen max-w-5xl w-full py-36">
+          <div className="flex flex-row justify-between">
+            <div className="text-slate-700 flex flex-col gap-2">
+              <h1 className="text-4xl font-semibold">My Latest Works</h1>
+              <p className="text-lmd">
+                Websites and mobile application projects.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <p className="text-amber-600 font-semibold underline underline-offset-2">
+                Explore More Works
+              </p>
+            </div>
+          </div>
+          <div className="mt-20">
+            <Carousel
+              additionalTransfrom={0}
+              arrows={false}
+              autoPlaySpeed={3000}
+              centerMode={false}
+              className=""
+              containerClass="pb-6"
+              dotListClass=""
+              draggable
+              focusOnSelect
+              itemClass=""
+              keyBoardControl
+              minimumTouchDrag={60}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={responsive}
+              rewind={false}
+              rewindWithAnimation={false}
+              rtl={false}
+              shouldResetAutoplay
+              partialVisible = {true}
+              showDots={true}
+              sliderClass=""
+              slidesToSlide={1}
+              swipeable
+            >
+              {/* Need to input images */}
+              <div className="mr-4 bg-amber-400 rounded-3xl p-8 w-96 h-80 select-none">
+                <h1 className="text-3xl text-white font-semibold">Web Developer</h1>
+                <p className="text-lg text-white font-medium">Landing Page</p>
+              </div>
+              <div className="mr-4 bg-emerald-700 rounded-3xl p-8 w-96 h-80 select-none">
+                <h1 className="text-3xl text-white font-semibold">Mobile App</h1>
+                <p className="text-lg text-white font-medium">Stacks by ADX Asia</p>
+              </div>
+              <div className="mr-4 bg-cyan-600 rounded-3xl p-8 w-96 h-80 select-none">
+                <h1 className="text-3xl text-white font-semibold">Application Testing</h1>
+                <p className="text-lg text-white font-medium">Alfagift</p>
+              </div>
+              <div className="mr-4 bg-indigo-500 rounded-3xl p-8 w-96 h-80 select-none">
+                <h1 className="text-3xl text-white font-semibold">Web Developer</h1>
+                <p className="text-lg text-white font-medium">The Stacks by ADX</p>
+              </div>
+              <div className="mr-4 bg-fuchsia-500 rounded-3xl p-8 w-96 h-80 select-none">
+                <h1 className="text-3xl text-white font-semibold">Web Developer</h1>
+                <p className="text-lg text-white font-medium">Metrics by ADX</p>
+              </div>
+              <div className="mr-4 bg-rose-500 rounded-3xl p-8 w-96 h-80 select-none">
+                <h1 className="text-3xl text-white font-semibold">Mobile App</h1>
+                <p className="text-lg text-white font-medium">Jagad</p>
+              </div>
+            </Carousel>
+          </div>
         </div>
       </div>
     </main>
